@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Bitter';
+  src: url('Bitter-ExtraBoldItalic.eot');
+  src: url('Bitter-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('Bitter-ExtraBoldItalic.svg#Bitter-ExtraBoldItalic') format('svg'),
+       url('Bitter-ExtraBoldItalic.ttf') format('truetype'),
+       url('Bitter-ExtraBoldItalic.woff') format('woff'),
+       url('Bitter-ExtraBoldItalic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
