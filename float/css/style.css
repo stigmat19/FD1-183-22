@@ -5,6 +5,7 @@
 }
 
 body{
+    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
 }
 li{
@@ -171,6 +172,9 @@ h3{
     padding-top: 0.1px;
     float: left;
 }
+.gallery__mobile{
+    display: none;
+}
 .gallery ul{
     float: left;
 }
@@ -313,6 +317,9 @@ h3{
     float: left;
     margin-right: 40px;
 }
+.similar__items ul.item.item__small > li{
+    margin-right: 30px;
+}
 
 .similar__items ul.item > li div:first-child{
     text-align: right;
@@ -350,6 +357,18 @@ h3{
 .similar__items .item.item__small > li{
     width: 254px;
     height: 337px;
+}
+.similar__items  .item{
+    width: 1085px;
+    margin: 0 auto;
+}
+.similar__items ul.item > li:last-child{
+    margin-right: 0;
+}
+
+.similar__items  .item.item__small{
+    width: 1106px;
+    margin: 0 auto;
 }
 .item.item__small li > div:nth-child(2) img{
     height: 160px;
