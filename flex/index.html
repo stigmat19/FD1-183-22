@@ -79,67 +79,57 @@
 <div class="best-items">
     <div class="container">
         <h2>Лучшие товары</h2>
+        <span id="addItem">+</span>
+        <div id="shadow">
+            <span id="close">X</span>
+            <div id="addItemForm">
+                <label>
+                    Рейтинг
+                    <input type="text" id="rating">
+                </label>
+                <label>
+                    Лайк
+                    <input type="checkbox" id="isLike">
+                </label>
+                <label>
+                    Название чая
+                    <input type="text" id="title">
+                </label>
+                <label>
+                    Категория
+                    <input type="text" id="category">
+                </label>
+                <label>
+                    Описание
+                    <textarea id="descr"></textarea>
+                </label>
+                <label>
+                    Вес
+                    <input type="text" id="weight">
+                </label>
+                <label>
+                    Цена
+                    <input type="text" id="price">
+                </label>
+                <label>
+                    Акция
+                    <input type="checkbox" id="isStock">
+                </label>
+                <label>
+                    Цена по акции
+                    <input type="text" id="stockPrice">
+                </label>
+            </div>
+            <button id="save" onclick="getFormData()">Добавить</button>
+        </div>
 
-        <ul>
-            <li>
-                <div class="rating">4.7</div>
-                <div class="like"></div>
-                <div class="img"></div>
-                <h3>Шоу Мэй </h3>
-                <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
-                <p class="price">
-                    100 гр. /
-                    <span>15 BYR</span>
-                </p>
-                <button class="btn">В корзину</button>
-            </li>
-            <li>
-                <div class="rating">4.7</div>
-                <div class="like"></div>
-                <div class="img"></div>
-                <h3>Шоу Мэй </h3>
-                <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
-                <p class="price">
-                    100 гр. /
-                    <span>15 BYR</span>
-                </p>
-                <button class="btn">В корзину</button>
-            </li>
-            <li>
-                <div class="rating">4.7</div>
-                <div class="like"></div>
-                <div class="img"></div>
-                <h3>Шоу Мэй </h3>
-                <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
-                <p class="price">
-                    100 гр. /
-                    <span>15 BYR</span>
-                </p>
-                <button class="btn">В корзину</button>
-            </li>
-            <li>
-                <div class="rating">4.7</div>
-                <div class="like"></div>
-                <div class="img"></div>
-                <h3>Шоу Мэй </h3>
-                <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
-                <p class="price">
-                    100 гр. /
-                    <span>15 BYR</span>
-                </p>
-                <button class="btn">В корзину</button>
-            </li>
-        </ul>
+        <ul id="best-items-list"></ul>
     </div>
 </div>
 
 <div class="sale-items">
     <div class="container">
-        <h2>Лучшие товары</h2>
+        <h2>Акции</h2>
 
         <ul>
             <li>
@@ -255,6 +245,8 @@
         </div>
     </div>
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

@@ -283,14 +283,67 @@ li {
 //best-items and sale-items
 .best-items, .sale-items {
   .container {
+
+    position: relative;
+
     h2 {
       margin-top: 229px;
       margin-bottom: 24px;
     }
 
+
+
+    #addItem{
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: $fz40;
+      font-weight: $bold;
+      cursor: pointer;
+    }
+
+    #shadow{
+      position: fixed;
+      width: 100vw;
+      height: 0;
+      background: rgba(0,0,0,0.8);
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.5s;
+      overflow: hidden;
+
+      #close{
+        color: $white;
+        font-size: $fz40;
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        cursor: pointer;
+      }
+
+      #addItemForm{
+        background-color: $white;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 50vh;
+        overflow-y: auto;
+        label{
+          flex-basis: 300px;
+        }
+      }
+
+    }
+
     ul {
       display: flex;
       justify-content: space-between;
+      flex-flow: wrap;
 
       li {
         width: 285px;
@@ -301,6 +354,7 @@ li {
         padding-top: 76px;
         padding-left: 23px;
         padding-right: 25px;
+        margin-bottom: 20px;
 
         .rating {
           position: absolute;
@@ -330,6 +384,11 @@ li {
           position: absolute;
           right: 16px;
           top: 25px;
+
+
+          &.active {
+            @include bgImage("isLike.svg");
+          }
         }
 
         .img {
@@ -371,6 +430,21 @@ li {
             font-size: $fz21;
             line-height: 29px;
             color: $dark;
+            &.disable{
+              text-decoration: line-through;
+              color: $text;
+              font-size: $fz18;
+            }
+
+            &.isStock{
+              color: $red;
+              font-size: $fz21;
+              margin-left: 8px;
+
+              &.hide{
+                display: none;
+              }
+            }
           }
         }
 

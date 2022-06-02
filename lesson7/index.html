@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wrap{
+            background: #2b98f0;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .wrap > div{
+            flex-basis: 350px;
+            height: 50px;
+            flex-shrink: 0;
+            flex-grow: 0;
+        }
+        .wrap > div:nth-child(1){
+            background-color: red;
+        }
+        .wrap > div:nth-child(2){
+            background-color: blue;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap">
+    <div></div>
+    <div></div>
+</div>
+
+</body>
+</html>
