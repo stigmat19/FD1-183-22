@@ -17,6 +17,11 @@ body {
 .container {
   width: $xl;
   margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+p, ul{
+  margin-bottom: 0;
 }
 
 a {
@@ -34,6 +39,10 @@ h2 {
 
 li {
   list-style-type: none;
+}
+
+ul{
+  padding-left: 0;
 }
 
 //header
@@ -185,34 +194,80 @@ li {
 
 //slider
 .slider {
-  height: 516px;
-  @include bgImage("slider-bg.jpg");
-  background-size: cover;
 
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 183px;
+  .carousel-item{
+    &:first-child{
+      @include bgImage("slider-bg.jpg");
+      h1{
+        color: $dark;
+      }
+      p{
+        color: $text;
+      }
+    }
+    &:nth-child(2){
+      @include bgImage("car1.jpg");
 
-    h1 {
-      font-weight: $ex-bold;
-      font-size: $fz40;
-      line-height: 54px;
-      color: $dark;
-      margin-bottom: 23px;
+      h1, p{
+        color: $white;
+      }
+    }
+    &:nth-child(3){
+      @include bgImage("car2.jpg");
+
+      h1, p{
+        color: $white;
+      }
     }
 
-    p {
-      font-size: $fz18;
-      line-height: 25px;
-      color: $text;
-      margin-bottom: 44px;
-    }
+    background-size: cover;
+    height: 516px;
 
-    .btn {
-      @include btn(305px);
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 183px;
+
+      h1 {
+        font-weight: $ex-bold;
+        font-size: $fz40;
+        line-height: 54px;
+        margin-bottom: 23px;
+      }
+
+      p {
+        font-size: $fz18;
+        line-height: 25px;
+        margin-bottom: 44px;
+      }
+
+      .btn {
+        @include btn(305px);
+      }
+    }
+  }
+
+  .carousel-control-prev-icon,
+  {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23696969'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+  }
+  .carousel-control-next-icon{
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23696969'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  }
+  .carousel-indicators [data-bs-target]{
+    background-color: #dbdbdb;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &.active{
+      background-color: #c4c4c4;
+      width: 14px;
+      height: 14px;
     }
   }
 }

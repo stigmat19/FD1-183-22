@@ -12,5 +12,7 @@
 }
 
 @mixin bgImage($url){
-  background: url($imagePath + $url) center no-repeat;
+  background-image: url($imagePath + $url);
+  background-position: center;
+  background-repeat: no-repeat;
 }

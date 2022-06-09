@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
 </head>
@@ -42,27 +46,71 @@
 <div class="menu">
     <div class="container">
         <ul>
-            <li><a href="#">Чай</a></li>
-            <li><a href="#">Кофе</a></li>
-            <li><a href="#">Сладенькое</a></li>
-            <li><a href="#">Атрибуты</a></li>
-            <li><a href="#">Наборы</a></li>
-            <li><a href="#">Акции</a></li>
+            <li><a href="#tea">Чай</a></li>
+            <li><a href="#coffee">Кофе</a></li>
+            <li><a href="#sweet">Сладенькое</a></li>
+            <li><a href="#subscr">Атрибуты</a></li>
+            <li><a href="#footer">Наборы</a></li>
+<!--        <li><a href="#">Акции</a></li>-->
         </ul>
     </div>
 </div>
 
-<div class="slider">
-    <div class="container">
-        <h1>Шу пуэр</h1>
-        <p>Давно выяснено, что при оценке дизайна и
-            <br> композиции текст мешает
-            <br> сосредоточиться.</p>
-        <button class="btn">Перейти в раздел</button>
+
+<div id="carouselExampleIndicators" class="slider carousel slide"
+     data-bs-ride="true">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="container">
+                <h1>Шу пуэр</h1>
+                <p>Давно выяснено, что при оценке дизайна и
+                    <br> композиции текст мешает
+                    <br> сосредоточиться.</p>
+                <button class="btn">Перейти в раздел</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <h1>Шу пуэр</h1>
+                <p>Давно выяснено, что при оценке дизайна и
+                    <br> композиции текст мешает
+                    <br> сосредоточиться.</p>
+                <button class="btn">Перейти в раздел</button>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="container">
+                <h1>Шу пуэр</h1>
+                <p>Давно выяснено, что при оценке дизайна и
+                    <br> композиции текст мешает
+                    <br> сосредоточиться.</p>
+                <button class="btn">Перейти в раздел</button>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button"
+            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
 
-<div class="catalog">
+
+<div class="catalog" id="tea">
     <div class="container">
         <h2>Каталог продукции</h2>
 
@@ -76,7 +124,7 @@
     </div>
 </div>
 
-<div class="best-items">
+<div class="best-items" id="coffee">
     <div class="container">
         <h2>Лучшие товары</h2>
         <span id="addItem">+</span>
@@ -127,7 +175,7 @@
     </div>
 </div>
 
-<div class="sale-items">
+<div class="sale-items" id="sweet">
     <div class="container">
         <h2>Акции</h2>
 
@@ -138,7 +186,8 @@
                 <div class="img"></div>
                 <h3>Шоу Мэй </h3>
                 <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
+                <p class="descr">Очень легкий чай с тонким ароматом, имеет
+                    сладковатый вкус с легкой кислинкой.</p>
                 <p class="price">
                     100 гр. /
                     <span>15 BYR</span>
@@ -151,7 +200,8 @@
                 <div class="img"></div>
                 <h3>Шоу Мэй </h3>
                 <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
+                <p class="descr">Очень легкий чай с тонким ароматом, имеет
+                    сладковатый вкус с легкой кислинкой.</p>
                 <p class="price">
                     100 гр. /
                     <span>15 BYR</span>
@@ -164,7 +214,8 @@
                 <div class="img"></div>
                 <h3>Шоу Мэй </h3>
                 <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
+                <p class="descr">Очень легкий чай с тонким ароматом, имеет
+                    сладковатый вкус с легкой кислинкой.</p>
                 <p class="price">
                     100 гр. /
                     <span>15 BYR</span>
@@ -177,7 +228,8 @@
                 <div class="img"></div>
                 <h3>Шоу Мэй </h3>
                 <p class="title">Черный чай</p>
-                <p class="descr">Очень легкий чай с тонким ароматом, имеет сладковатый вкус с легкой кислинкой.</p>
+                <p class="descr">Очень легкий чай с тонким ароматом, имеет
+                    сладковатый вкус с легкой кислинкой.</p>
                 <p class="price">
                     100 гр. /
                     <span>15 BYR</span>
@@ -188,7 +240,7 @@
     </div>
 </div>
 
-<div class="subscribe">
+<div class="subscribe" id="subscr">
     <div class="container">
         <h2>Подпишись и получи <br>скидку на всю продукцию</h2>
 
@@ -201,7 +253,7 @@
     </div>
 </div>
 
-<footer>
+<footer id="footer">
     <div class="container">
         <div class="social_and_logo">
             <img src="img/footer-logo.svg" alt="img">
@@ -246,6 +298,9 @@
     </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 <script src="js/script.js"></script>
 
 </body>

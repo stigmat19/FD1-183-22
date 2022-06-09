@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        .block{
+            height: 100vh;
+        }
+        .block:first-child{
+            background: red;
+            margin-top: 54px;
+        }
+        .block:nth-child(2){
+            background: blue;
+        }
+        .block:last-child{
+            background: green;
+        }
+        #menu{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 54px;
+            display: flex;
+            justify-content: flex-start;
+            background: #fff;
+            margin: 0;
+        }
+        #menu li{
+            font-size: 18px;
+            margin-right: 20px;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+
+<ul id="menu">
+    <li>
+        <a href="#one">one</a>
+    </li>
+    <li>
+        <a href="#two">two</a>
+    </li>
+    <li>
+        <a href="#three">three</a>
+    </li>
+</ul>
+
+<div>
+    <div id="one" class="block"></div>
+    <div id="two" class="block"></div>
+    <div id="three" class="block"></div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    //scroll menu
+    jQuery("#menu").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id  = jQuery(this).attr('href'),
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = jQuery(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        jQuery('body,html').animate({scrollTop: top-54}, 500);
+    });
+
+</script>
+</body>
+</html>
